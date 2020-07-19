@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+a {
+  color: #17a2b8!important;
+  &:hover {
+    color: #138496!important;
+  }
+}
+
+.jumbotron a {
+  word-break: break-all;
+}
+
+.btn {
+  &.btn-link {
+    color: #17a2b8;
+    &:hover {
+      color: #138496;
+    }
+  }
+}
+
+.input-error {
+  border-color: #ff0000!important;
+}
+
+.text-error {
+  color: #ff0000;
+}
