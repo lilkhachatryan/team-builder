@@ -4,7 +4,7 @@ import Route from "./components/Route";
 import { Home, Login, SignUp, Topics, Profile, Projects } from "./pages";
 
 export const Routes = Object.freeze({
-    Root: '/',
+    Root: process.env.PUBLIC_URL + '/',
     Home: '/home',
     Profile: '/profile',
     Projects: '/projects',
