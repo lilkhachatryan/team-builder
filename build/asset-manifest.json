@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.e678c733.chunk.css",
-    "main.js": "/static/js/main.687e584c.chunk.js",
-    "main.js.map": "/static/js/main.687e584c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8c44053c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8c44053c.js.map",
-    "static/css/2.ee545042.chunk.css": "/static/css/2.ee545042.chunk.css",
-    "static/js/2.623a2809.chunk.js": "/static/js/2.623a2809.chunk.js",
-    "static/js/2.623a2809.chunk.js.map": "/static/js/2.623a2809.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c5e6442ee8f49122ca4fd69cdde62f8a.js": "/precache-manifest.c5e6442ee8f49122ca4fd69cdde62f8a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.ee545042.chunk.css.map": "/static/css/2.ee545042.chunk.css.map",
-    "static/css/main.e678c733.chunk.css.map": "/static/css/main.e678c733.chunk.css.map",
-    "static/js/2.623a2809.chunk.js.LICENSE.txt": "/static/js/2.623a2809.chunk.js.LICENSE.txt",
-    "static/media/notifications.css": "/static/media/notification.c0d3c94c.eot"
+    "main.css": "/team-builder/static/css/main.e678c733.chunk.css",
+    "main.js": "/team-builder/static/js/main.6747d301.chunk.js",
+    "main.js.map": "/team-builder/static/js/main.6747d301.chunk.js.map",
+    "runtime-main.js": "/team-builder/static/js/runtime-main.613dfac9.js",
+    "runtime-main.js.map": "/team-builder/static/js/runtime-main.613dfac9.js.map",
+    "static/css/2.d5c0da45.chunk.css": "/team-builder/static/css/2.d5c0da45.chunk.css",
+    "static/js/2.62b3280b.chunk.js": "/team-builder/static/js/2.62b3280b.chunk.js",
+    "static/js/2.62b3280b.chunk.js.map": "/team-builder/static/js/2.62b3280b.chunk.js.map",
+    "index.html": "/team-builder/index.html",
+    "precache-manifest.c2eea19a6166805933d1607043da7403.js": "/team-builder/precache-manifest.c2eea19a6166805933d1607043da7403.js",
+    "service-worker.js": "/team-builder/service-worker.js",
+    "static/css/2.d5c0da45.chunk.css.map": "/team-builder/static/css/2.d5c0da45.chunk.css.map",
+    "static/css/main.e678c733.chunk.css.map": "/team-builder/static/css/main.e678c733.chunk.css.map",
+    "static/js/2.62b3280b.chunk.js.LICENSE.txt": "/team-builder/static/js/2.62b3280b.chunk.js.LICENSE.txt",
+    "static/media/notifications.css": "/team-builder/static/media/notification.c0d3c94c.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c44053c.js",
-    "static/css/2.ee545042.chunk.css",
-    "static/js/2.623a2809.chunk.js",
+    "static/js/runtime-main.613dfac9.js",
+    "static/css/2.d5c0da45.chunk.css",
+    "static/js/2.62b3280b.chunk.js",
     "static/css/main.e678c733.chunk.css",
-    "static/js/main.687e584c.chunk.js"
+    "static/js/main.6747d301.chunk.js"
   ]
 }
