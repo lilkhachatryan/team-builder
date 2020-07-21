@@ -5,7 +5,7 @@ const initialState = {
 
 export function projects (state = initialState, action) {
     switch (action.type) {
-        case 'PRODUCTS_FETCH_SUCCESS':
+        case 'PROJECTS_FETCH_SUCCESS':
             return {
                 ...state,
                 projects: action.projects

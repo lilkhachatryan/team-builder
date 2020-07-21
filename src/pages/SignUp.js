@@ -8,22 +8,10 @@ import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import {Link} from "react-router-dom";
 import {Routes} from "../Router";
+import { notifySuccess } from "../plugins/notify";
 
 class SignUp extends Component {
     state = {
-        // fields: {
-        //     email: '',
-        //     password: '',
-        //     firstName: 'Lil',
-        //     lastName: 'Kh',
-        //     birthDate: new Date(),
-        //     sex: 'male',
-        //     avatarUrl: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png',
-        //     jsExperience: 2,
-        //     reactExperience: 1,
-        //     companyId: ''
-        // },
-        // fieldErrors: {},
         companies: [],
         rememberMe: false
     };
@@ -31,8 +19,8 @@ class SignUp extends Component {
     initialValues = {
         email: '',
         password: '',
-        firstName: 'Lil',
-        lastName: 'Kh',
+        firstName: '',
+        lastName: '',
         birthDate: new Date(),
         sex: 'male',
         avatarUrl: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png',
@@ -42,7 +30,7 @@ class SignUp extends Component {
     };
 
     SIGNUP_VALIDATION_SCHEMA = yup.object().shape({
-        fistName: yup
+        firstName: yup
             .string()
             .required("First name is required"),
         lastName: yup
@@ -75,27 +63,9 @@ class SignUp extends Component {
             .required("Password is required")
     });
 
-    // onInputChange = ({ name, value, error }) => {
-    //     const { fields, fieldErrors } = this.state;
-    //     fields[name] = value;
-    //     fieldErrors[name] = error;
-    //     this.setState({ fields, fieldErrors })
-    // };
-
     onRememberMeChange = ({ value }) => {
         this.setState({ rememberMe: value })
     };
-
-    // onDateChange = (date) => {
-    //     const { fields } = this.state;
-    //     fields.birthDate = formatDate(date);
-    //     this.setState({ fields })
-    // };
-    //
-    // onSelectCompany = (e) => {
-    //     const companyId = e.target.value ? e.target.value : null;
-    //     this.setState({ fields: { ...this.state.fields, companyId } });
-    // };
 
     attemptSignUp = (values) => {
         const payload = {
@@ -107,7 +77,7 @@ class SignUp extends Component {
         register(payload)
             .then(res => {
                 if (res.status === 200) {
-                    console.log('res reg', res.data);
+                    notifySuccess('Sign up completed successfully');
                     this.props.history.push('/login')
                 }
             })
@@ -123,7 +93,6 @@ class SignUp extends Component {
     getCompaniesFromServer = () => {
         getCompanies()
             .then(res => {
-                console.log('res', res);
                 this.setState({ companies: res.data })
             })
             .catch(err => {
@@ -262,115 +231,6 @@ class SignUp extends Component {
                         </Link>
                     </div>
                 </div>
-
-                {/*<form>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <FormField value={this.state.fields.firstName}*/}
-                {/*                       onChange={this.onInputChange}*/}
-                {/*                       id="firstName"*/}
-                {/*                       name="firstName"*/}
-                {/*                       placeholder="Type your firstName" />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <FormField value={this.state.fields.lastName}*/}
-                {/*                       onChange={this.onInputChange}*/}
-                {/*                       id="lastName"*/}
-                {/*                       name="lastName"*/}
-                {/*                       placeholder="Type your lastName" />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <FormField value={this.state.fields.email}*/}
-                {/*                       onChange={this.onInputChange}*/}
-                {/*                       type="email"*/}
-                {/*                       id="inputEmail"*/}
-                {/*                       name="email"*/}
-                {/*                       placeholder="Type your email" />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <FormField value={this.state.fields.password}*/}
-                {/*                       onChange={this.onInputChange}*/}
-                {/*                       type="password"*/}
-                {/*                       id="password"*/}
-                {/*                       name="password"*/}
-                {/*                       placeholder="Type your password" />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <fieldset className="form-group" >*/}
-                {/*        <div className="row">*/}
-                {/*            <legend className="col-form-label col-sm-2 pt-0">Radios</legend>*/}
-                {/*            <div className="col-sm-10">*/}
-                {/*                <div className="form-check d-flex">*/}
-                {/*                    <FormField  value="male"*/}
-                {/*                               onChange={this.onInputChange}*/}
-                {/*                                checked={this.state.fields.sex === "male"}*/}
-                {/*                                className="form-check-input"*/}
-                {/*                                type="radio"*/}
-                {/*                                name="sex"*/}
-                {/*                                id="male" />*/}
-                {/*                </div>*/}
-                {/*                <div className="form-check d-flex">*/}
-                {/*                    <FormField  value="female"*/}
-                {/*                                onChange={this.onInputChange}*/}
-                {/*                                checked={this.state.fields.sex === "female"}*/}
-                {/*                                className="form-check-input"*/}
-                {/*                                type="radio"*/}
-                {/*                                name="sex"*/}
-                {/*                                id="female" />*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </fieldset>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <DatePicker*/}
-                {/*                onChange={this.onDateChange}*/}
-                {/*                value={this.state.fields.birthDate}*/}
-                {/*            />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <label htmlFor="validationDefault04">State</label>*/}
-                {/*        <select onChange={this.onSelectCompany}*/}
-                {/*                value={this.state.fields.companyId || ''}*/}
-                {/*                className="form-control mb-3">*/}
-                {/*            <option value="">Default select</option>*/}
-                {/*            {*/}
-                {/*                this.state.companies.map((company, i) => (*/}
-                {/*                    <option value={company.id}*/}
-                {/*                            key={company.id + i}>{company.name}</option>*/}
-                {/*                ))*/}
-                {/*            }*/}
-                {/*        </select>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <div className="form-check d-flex">*/}
-                {/*                <FormField  value={this.state.rememberMe}*/}
-                {/*                            onChange={this.onRememberMeChange}*/}
-                {/*                            className="form-check-input"*/}
-                {/*                            type="checkbox"*/}
-                {/*                            name="rememberMe"*/}
-                {/*                            id="rememberMe" />*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="form-group row">*/}
-                {/*        <div className="col-sm-10">*/}
-                {/*            <button onClick={this.onSubmit}*/}
-                {/*                    type="submit" className="btn btn-info float-right">Submit</button>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</form>*/}
             </>
         )
     }

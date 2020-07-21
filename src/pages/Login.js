@@ -73,59 +73,6 @@ const Login = ({ history }) => {
                     </Link>
                 </div>
             </div>
-            {/*<form>*/}
-            {/*    <div className="form-group row">*/}
-            {/*        /!*<input value={values.email}*!/*/}
-            {/*        /!*       onChange={handleChange}*!/*/}
-            {/*        /!*       onBlur={handleBlur}*!/*/}
-            {/*        /!*       className={`form-control ${touched.email ? 'is-invalid' : ''}`}*!/*/}
-            {/*        /!*       type="text"*!/*/}
-            {/*        /!*       name="email"*!/*/}
-            {/*        /!*       id="email" />*!/*/}
-            {/*        /!*<div className="text-error">{ touched.email ? errors.email : undefined }</div>*!/*/}
-            {/*    </div>*/}
-
-            {/*    <div className="form-group row">*/}
-            {/*        <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>*/}
-            {/*        <div className="col-sm-10">*/}
-            {/*            <FormField value={this.state.fields.email}*/}
-            {/*                       onChange={this.onInputChange}*/}
-            {/*                       type="email"*/}
-            {/*                       id="inputEmail"*/}
-            {/*                       name="email"*/}
-            {/*                       placeholder="Type your email" />*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="form-group row">*/}
-            {/*        <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>*/}
-            {/*        <div className="col-sm-10">*/}
-            {/*            <FormField value={this.state.fields.password}*/}
-            {/*                       onChange={this.onInputChange}*/}
-            {/*                       type="password"*/}
-            {/*                       id="password"*/}
-            {/*                       name="password"*/}
-            {/*                       placeholder="Type your password" />*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="form-group row">*/}
-            {/*        <div className="col-sm-2">Checkbox</div>*/}
-            {/*        <div className="col-sm-10">*/}
-            {/*            <div className="form-check">*/}
-            {/*                <input className="form-check-input" type="checkbox" id="gridCheck1" />*/}
-            {/*                <label className="form-check-label" htmlFor="gridCheck1">*/}
-            {/*                    Example checkbox*/}
-            {/*                </label>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="form-group row">*/}
-            {/*        <div className="col-sm-10">*/}
-            {/*            <button onClick={handleSubmit}*/}
-            {/*                    disabled={!isValid}*/}
-            {/*                    type="submit" className="btn btn-info float-right">Submit</button>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</form>*/}
         </>
     )
 };

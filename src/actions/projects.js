@@ -1,10 +1,10 @@
 import * as endpoints from "../utils/endpoints";
 import { notifySuccess } from "../plugins/notify";
 
-export function projectsFetchSuccess (data) {
+export function projectsFetchSuccess (projects) {
     return {
         type: 'PROJECTS_FETCH_SUCCESS',
-        data
+        projects
     }
 
 }
@@ -24,6 +24,7 @@ export function getProjects() {
         return endpoints.getProjects()
             .then((response) => {
                 if (response.status === 200) {
+                    console.log('response.data', response.data);
                     dispatch(projectsFetchSuccess(response.data))
                 }
             })
@@ -40,6 +41,7 @@ export function voteProject (id, payload) {
                 if (response.status === 200) {
                     console.log('add topic', response.data);
                     dispatch(projectsVoteSuccess(response.data));
+                    dispatch(getProjects())
                     notifySuccess('Topic added successfully');
                 }
                 // dispatch(itemsAreLoading(false));

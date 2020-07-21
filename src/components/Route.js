@@ -14,7 +14,7 @@ import {connect} from "react-redux";
 
 const Route = ({ guard, component: Component, fetchUser, user, ...rest}) => {
     let isLoggedIn = !!getSessionStorage('token');
-    setupInterceptors(rest.history);
+    // setupInterceptors(rest.history);
 
     if (guard) {
         if (isLoggedIn) {
@@ -33,6 +33,8 @@ const Route = ({ guard, component: Component, fetchUser, user, ...rest}) => {
                     //         </>
                     //     );
                     // })
+            } else {
+                // return null
             }
 
             return (

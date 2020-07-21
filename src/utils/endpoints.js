@@ -16,5 +16,7 @@ export const deleteTopic = (id) => axios.delete(`topics/${id}`);
 
 
 export const getProjects = () => axios.get('projects');
-export const voteProject = (id, data) => axios.delete(`projects/${id}/voting`, data);
+// /projects/:id/voting
+
+export const voteProject = (id, data) => axios.post(`projects/${id}/voting`, data);
 

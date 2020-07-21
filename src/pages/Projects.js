@@ -10,6 +10,7 @@ class Projects extends Component {
     render() {
         console.log('this.props.topics', this.props.topics);
         const { projects } = this.props;
+        console.log('projects', projects);
 
         return (
             <>
@@ -20,8 +21,6 @@ class Projects extends Component {
                             <li className="list-group-item"
                                 key={item.id}>
                                 { item.title }
-                                ---
-                                { item.items.join(';') }
 
                                 <button onClick={() => this.props.voteProject(item.id, {
                                     type: item.votedByMe ? 'unlike' : 'like'

@@ -28,7 +28,7 @@ class Profile extends Component {
     };
 
     USER_VALIDATION_SCHEMA = yup.object().shape({
-        fistName: yup
+        firstName: yup
             .string()
             .required("First name is required"),
         lastName: yup
@@ -99,7 +99,7 @@ class Profile extends Component {
                 <Formik
                     initialValues={user}
                     validateOnMount={false}
-                    // validationSchema={this.USER_VALIDATION_SCHEMA}
+                    validationSchema={this.USER_VALIDATION_SCHEMA}
                     onSubmit={this.attemptUpdate}
                 >
                     {(formik) => (
