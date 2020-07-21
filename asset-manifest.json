@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/team-builder/static/css/main.e678c733.chunk.css",
-    "main.js": "/team-builder/static/js/main.a00c1483.chunk.js",
-    "main.js.map": "/team-builder/static/js/main.a00c1483.chunk.js.map",
+    "main.js": "/team-builder/static/js/main.8cc6fde4.chunk.js",
+    "main.js.map": "/team-builder/static/js/main.8cc6fde4.chunk.js.map",
     "runtime-main.js": "/team-builder/static/js/runtime-main.613dfac9.js",
     "runtime-main.js.map": "/team-builder/static/js/runtime-main.613dfac9.js.map",
     "static/css/2.d5c0da45.chunk.css": "/team-builder/static/css/2.d5c0da45.chunk.css",
     "static/js/2.62b3280b.chunk.js": "/team-builder/static/js/2.62b3280b.chunk.js",
     "static/js/2.62b3280b.chunk.js.map": "/team-builder/static/js/2.62b3280b.chunk.js.map",
     "index.html": "/team-builder/index.html",
-    "precache-manifest.19229a991528c5318c46e67471637683.js": "/team-builder/precache-manifest.19229a991528c5318c46e67471637683.js",
+    "precache-manifest.f2afe070500371d21c3f25ba35049a4c.js": "/team-builder/precache-manifest.f2afe070500371d21c3f25ba35049a4c.js",
     "service-worker.js": "/team-builder/service-worker.js",
     "static/css/2.d5c0da45.chunk.css.map": "/team-builder/static/css/2.d5c0da45.chunk.css.map",
     "static/css/main.e678c733.chunk.css.map": "/team-builder/static/css/main.e678c733.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.d5c0da45.chunk.css",
     "static/js/2.62b3280b.chunk.js",
     "static/css/main.e678c733.chunk.css",
-    "static/js/main.a00c1483.chunk.js"
+    "static/js/main.8cc6fde4.chunk.js"
   ]
 }
